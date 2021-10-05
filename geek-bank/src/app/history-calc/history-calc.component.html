@@ -1,0 +1,6 @@
+<h2>History:</h2>
+<div *ngFor="let calc of calculationHistory" class="box shadow-1 m-3 p-1">
+    <p class="text-center">
+        {{ calc.firstValue }} + {{ calc.secondValue }} = {{ calc. result }}
+    </p>
+</div>

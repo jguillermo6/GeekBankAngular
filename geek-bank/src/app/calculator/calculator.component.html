@@ -1,0 +1,30 @@
+<p-card header="Sum" subheader="Determines if the sum result is in the Fibonacci sequence" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Fibonacci_spiral_34.svg">
+    </ng-template>
+    <form [formGroup]="calculationForm" (ngSubmit)="onSubmit()">
+        <div class="p-grid p-fluid">
+            <div class="p-field p-col-12">
+                <label for="firtvalue">First value</label>
+                <p-inputNumber  
+                    mode="decimal" 
+                    inputId="firtvalue" 
+                    [useGrouping]="false" 
+                    formControlName="firstValue">
+                </p-inputNumber>
+            </div>
+
+            <div class="p-field p-col-12">
+                <label for="secondvalue">Second value</label>
+                <p-inputNumber  mode="decimal" inputId="secondvalue" [useGrouping]="false" formControlName="secondValue">
+                </p-inputNumber>
+            </div>
+            <div class="p-field p-col-12">
+                <button pButton 
+                    type="submit" 
+                    label="Calculate"
+                    [disabled]="!calculationForm.valid" ></button>                
+            </div>
+        </div>
+    </form>
+</p-card>
